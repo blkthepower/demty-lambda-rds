@@ -1,7 +1,13 @@
 # demty-lambda-rds
+
 Shows a lambda that connects to a MYSQL instance in RDS
 
 It's important to remember that both the database and the lambda should be in the same VPC and the security groups should allow inbound and outbund connections.
+
+# Loading the lambda
+
+The contents of "site-packages" and the whole "app" folder should be packed in a single ZIP file. After loading the ZIP file into the lambda, the handler must be 
+changed to `app.lambda_function.lambda_handler`, just like the file's structure.
 
 ## Enviroment varibales
 
